@@ -11,7 +11,11 @@ const Main = () => {
     setcurrentActive(buttonCategory);
 
     const newArr = myProjects.filter((item) => {
-      return item.category.includes(buttonCategory);
+      const ZZZ = item.category.find((myItem) => {
+        return myItem === buttonCategory;
+      });
+
+      return ZZZ === buttonCategory;
     });
 
     setArr(newArr);
@@ -19,7 +23,7 @@ const Main = () => {
 
   return (
     <main className="flex">
-      <section className="flex left-section">
+      <section className="flex  left-section">
         <button
           onClick={() => {
             setcurrentActive("all");
@@ -47,7 +51,6 @@ const Main = () => {
         >
           JavaScript
         </button>
-
         <button
           onClick={() => {
             handleClick("react");
@@ -56,9 +59,10 @@ const Main = () => {
         >
           React & MUI
         </button>
+
       </section>
 
-      <section className="flex right-section">
+      <section className=" flex right-section">
         <AnimatePresence>
           {arr.map((item) => {
             return (
@@ -68,7 +72,7 @@ const Main = () => {
                 animate={{ transform: "scale(1)" }}
                 transition={{ type: "spring", damping: 8, stiffness: 50 }}
                 key={item.imgPath}
-                className="card"
+                className="  card"
               >
                 <img width={266} src={item.imgPath} alt="" />
 
@@ -87,7 +91,10 @@ const Main = () => {
 
                     <a className="link flex" href="">
                       more
-                      <span style={{ alignSelf: "end" }} className="icon-arrow-right"></span>
+                      <span
+                        style={{ alignSelf: "end" }}
+                        className="icon-arrow-right"
+                      ></span>
                     </a>
                   </div>
                 </div>
