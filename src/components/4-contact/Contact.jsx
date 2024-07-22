@@ -3,6 +3,8 @@ import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import doneAnimation from "../../animation/done.json";
 import contactAnimation from "../../animation/contact.json";
+import { FaGoogle } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xrgvvdlo");
@@ -47,6 +49,8 @@ const Contact = () => {
           </div>
 
           <div className="all-icons flex">
+            <FaGoogle />
+            <BsFacebook />
             <button type="submit" disabled={state.submitting} className="submit">
               {state.submitting ? "Submitting ..." : "Submit"}
             </button>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./header.css";
+import { CiDark } from "react-icons/ci";
 
 const Header = () => {
   const [showModal, setshowModal] = useState(false);

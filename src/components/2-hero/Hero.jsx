@@ -3,6 +3,12 @@ import "./hero.css";
 import devAnimation from "../../animation/dev.json";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { BsFacebook } from "react-icons/bs";
+import { FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { BsLinkedin } from "react-icons/bs";
+
+
 
 const Hero = () => {
   const lottieRef = useRef();
@@ -39,10 +45,11 @@ const Hero = () => {
         </p>
 
         <div className="all-icons flex">
-          <div className="icon icon-twitter"></div>
-          <div className="icon icon-instagram"></div>
-          <div className="icon icon-github"></div>
-          <div className="icon icon-linkedin"></div>
+          <BsFacebook />
+          <FaTwitter />
+          <FaGithub />
+          <BsLinkedin />
+
           <a href="/public/cv.pdf" download className="btn btn-download-cv">Download CV</a>
         </div>
 
