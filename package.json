@@ -12,7 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "homepage": "https://eng3bdo7ame.github.io/portfolio/",
+    "homepage": "https://eng3bdo7ame.github.io/portfolio",
     "@formspree/react": "^2.4.1",
     "framer-motion": "^10.12.16",
     "lottie-react": "^2.4.0",
